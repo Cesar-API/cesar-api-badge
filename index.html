@@ -2,53 +2,344 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CESAR API Explorer Badge</title>
-  
-  <!-- Open Graph Metadata -->
-  <meta property="og:title" content="🏆 CESAR API Explorer Badge">
-  <meta property="og:description" content="Congratulations on earning the CESAR API Explorer Badge! This achievement recognizes your successful completion of Continental's Introduction to CESAR API Workshop and your understanding of how APIs connect systems in tire service operations.">
-  <meta property="og:image" content="https://Cesar-API.github.io/cesar-api-badge/assets/badge.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://Cesar-API.github.io/cesar-api-badge/">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="🏆 CESAR API Explorer Badge">
-  <meta name="twitter:description" content="Congratulations on earning the CESAR API Explorer Badge! This achievement recognizes your successful completion of Continental's Introduction to CESAR API Workshop and your understanding of how APIs connect systems in tire service operations.">
-  <meta name="twitter:image" content="https://Cesar-API.github.io/cesar-api-badge/assets/badge.png">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share Your CESAR API Badge</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
       padding: 40px;
-      background: #f4f4f4;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      text-align: center;
     }
-    img {
-      max-width: 280px;
-      margin: 20px auto;
+    
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+      font-size: 28px;
     }
-    .button {
-      display: inline-block;
-      padding: 12px 20px;
-      margin-top: 20px;
+    
+    .subtitle {
+      color: #666;
+      margin-bottom: 30px;
       font-size: 16px;
-      color: #fff;
-      background: #0077b5;
-      border-radius: 6px;
-      text-decoration: none;
     }
-    .button:hover {
-      background: #005582;
+    
+    .badge-container {
+      margin: 30px 0;
+      animation: fadeInScale 0.6s ease-out;
+    }
+    
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    
+    .badge-image {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .download-badge {
+      margin-top: 15px;
+      display: inline-block;
+      color: #ff9f00;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: 2px solid #ff9f00;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+    
+    .download-badge:hover {
+      background-color: #ff9f00;
+      color: white;
+    }
+    
+    .steps {
+      text-align: left;
+      margin: 30px 0;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+      border-left: 4px solid #ff9f00;
+    }
+    
+    .steps h2 {
+      color: #ff9f00;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    
+    .steps ol {
+      padding-left: 20px;
+      color: #333;
+    }
+    
+    .steps li {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    
+    .post-text-container {
+      margin: 30px 0;
+      text-align: left;
+    }
+    
+    .post-text-label {
+      font-weight: bold;
+      color: #ff9f00;
+      margin-bottom: 10px;
+      display: block;
+      font-size: 16px;
+    }
+    
+    .post-text {
+      width: 100%;
+      padding: 20px;
+      border: 2px solid #ff9f00;
+      border-radius: 12px;
+      background-color: #fffbf0;
+      font-size: 14px;
+      line-height: 1.8;
+      color: #333;
+      resize: vertical;
+      min-height: 200px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    
+    .button-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 15px 35px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-copy {
+      background-color: #ff9f00;
+      color: #000;
+    }
+    
+    .btn-copy:hover {
+      background-color: #e68f00;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255,159,0,0.3);
+    }
+    
+    .btn-linkedin {
+      background-color: #0077B5;
+      color: white;
+    }
+    
+    .btn-linkedin:hover {
+      background-color: #005582;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,119,181,0.3);
+    }
+    
+    .btn-copy.copied {
+      background-color: #28a745;
+      color: white;
+    }
+    
+    .success-message {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      color: #155724;
+      font-size: 14px;
+    }
+    
+    .success-message.show {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      color: #666;
+      font-size: 13px;
+    }
+    
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+      
+      h1 {
+        font-size: 24px;
+      }
+      
+      .button-group {
+        flex-direction: column;
+      }
+      
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🏆 CESAR API Explorer Badge</h1>
-  <p>Congratulations on completing the <strong>Introduction to CESAR API Workshop</strong>!</p>
-  <img src="assets/badge.png" alt="CESAR API Badge">
-  <br>
-  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://Cesar-API.github.io/cesar-api-badge/"
-     class="button" target="_blank">Share on LinkedIn</a>
+
+  <div class="container">
+    <h1>🎉 Congratulations!</h1>
+    <p class="subtitle">You've earned the CESAR API Explorer Badge</p>
+    
+    <!-- Badge Display -->
+    <div class="badge-container">
+      <img src="https://github.com/Cesar-API/cesar-api-badge/blob/main/assets/badge.png?raw=true" 
+           alt="CESAR API Explorer Badge" 
+           class="badge-image">
+      <br>
+      <a href="https://github.com/Cesar-API/cesar-api-badge/blob/main/assets/badge.png?raw=true" 
+         download="cesar-api-badge.png" 
+         class="download-badge">
+        💾 Download Badge
+      </a>
+    </div>
+    
+    <!-- Instructions -->
+    <div class="steps">
+      <h2>📱 How to Share on LinkedIn:</h2>
+      <ol>
+        <li><strong>Edit the text below</strong> if you want to personalize it</li>
+        <li><strong>Click "Copy Text"</strong> to copy your post message</li>
+        <li><strong>Click "Open LinkedIn"</strong> to create your post</li>
+        <li><strong>Upload your badge</strong> and paste the text</li>
+      </ol>
+    </div>
+    
+    <!-- Editable Post Text -->
+    <div class="post-text-container">
+      <label class="post-text-label">✏️ Your LinkedIn Post (You can edit this!):</label>
+      <textarea class="post-text" id="postText">✨ I just earned the CESAR API Explorer badge during Continental's Introduction to CESAR API workshop.
+
+It was exciting to learn how APIs connect systems and bring real value to tire service operations.
+
+Looking forward to seeing how CESAR API continues to transform fleet services! 🚛🔗🛞
+
+#Continental #APIs #Innovation #FleetSolutions #CESARapi</textarea>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div class="button-group">
+      <button class="btn btn-copy" id="copyBtn" onclick="copyText()">
+        📋 Copy Text
+      </button>
+      <a href="https://www.linkedin.com/feed/" 
+         target="_blank" 
+         class="btn btn-linkedin">
+        🚀 Open LinkedIn
+      </a>
+    </div>
+    
+    <div class="success-message" id="successMessage">
+      ✅ Text copied! Now open LinkedIn and create your post.
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p>Thanks for participating in the CESAR API Workshop! 🙏</p>
+      <p style="margin-top: 10px;">
+        <a href="https://github.com/Cesar-API" style="color: #ff9f00; text-decoration: none;">
+          Visit CESAR API on GitHub →
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function copyText() {
+      const postText = document.getElementById('postText');
+      const copyBtn = document.getElementById('copyBtn');
+      const successMessage = document.getElementById('successMessage');
+      
+      // Select and copy the text
+      postText.select();
+      postText.setSelectionRange(0, 99999); // For mobile devices
+      
+      try {
+        document.execCommand('copy');
+        
+        // Show success feedback
+        copyBtn.textContent = '✅ Copied!';
+        copyBtn.classList.add('copied');
+        successMessage.classList.add('show');
+        
+        // Reset button after 3 seconds
+        setTimeout(() => {
+          copyBtn.textContent = '📋 Copy Text';
+          copyBtn.classList.remove('copied');
+        }, 3000);
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          successMessage.classList.remove('show');
+        }, 5000);
+        
+      } catch (err) {
+        alert('Failed to copy text. Please select and copy manually.');
+      }
+    }
+  </script>
+
 </body>
 </html>
